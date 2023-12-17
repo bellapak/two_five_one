@@ -1,0 +1,31 @@
+canvas {
+  display: block; /* 캔버스를 블록 요소로 설정하여 불필요한 여백을 없애줍니다. */
+  margin: 0; /* 여백을 0으로 설정합니다. */
+  padding: 0; /* 안쪽 여백을 0으로 설정합니다. */
+  background-color: black;
+}
+img {
+  display: block;
+  max-width: 100%; /* 이미지가 부모 컨테이너의 최대 너비에 맞게 조절됩니다. */
+  height: auto; /* 가로세로 비율을 유지하여 이미지가 늘어납니다. */
+  transition: transform 0.3s ease;
+}
+
+.image-container {
+  display: flex; /* 컨테이너를 수평 가운데 정렬하기 위해 flex 사용합니다. */
+  flex-wrap: wrap; /* 이미지를 자동으로 줄 바꿈합니다. */
+  justify-content: center; /* 가로 방향 가운데 정렬합니다. */
+  align-items: center; /* 세로 방향 가운데 정렬합니다. */
+  background-color: rgb(0, 0, 0); /* 이미지 컨테이너 배경을 블랙으로 설정합니다. */
+  gap: 0; /* 이미지 사이 간격을 0으로 설정합니다. */
+}
+
+body {
+  margin: 0; /* body의 기본 마진을 제거합니다. */
+  overflow: hidden; /* body 영역 밖으로 벗어나는 내용을 잘라냅니다. */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  height: 100vh; /* 화면 높이 100%를 사용합니다. */
+}

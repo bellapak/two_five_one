@@ -48,5 +48,5 @@ body {
   padding: 10px; /* 내부 여백 */
   border-radius: 5px; /* 모서리 둥글게 */
   font-size: 0.8em; /* 작은 글꼴 크기 */
-  z-index: 100; /* 다른 요소들 위에 표시 */
+  z-index: 100; /* 다른 요소들 위에 표시  */
 }

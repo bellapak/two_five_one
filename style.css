@@ -20,6 +20,17 @@ img {
   gap: 0; /* 이미지 사이 간격을 0으로 설정합니다. */
 }
 
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 6개의 열을 동일한 비율로 설정 */
+  grid-template-rows: repeat(6, 1fr); /* 6개의 행을 동일한 비율로 설정 */
+  gap: 10px; /* 그리드 항목 사이의 간격 */
+  width: 600px; /* 그리드 컨테이너의 너비를 600px로 고정 */
+  height: 600px; /* 그리드 컨테이너의 높이를 600px로 고정 */
+  justify-content: center;
+  align-items: center;
+}
+
 body {
   margin: 0; /* body의 기본 마진을 제거합니다. */
   overflow: hidden; /* body 영역 밖으로 벗어나는 내용을 잘라냅니다. */

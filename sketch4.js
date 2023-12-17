@@ -42,7 +42,7 @@ function mouseReleased() {
 
 function arrangeImages() {
     for (let i = 0; i < 36; i++) {
-        let size = 200;
+        let size = 160;
         let blendMode = MULTIPLY;
         let img = createImg(`img/Asset ${i + 1}@4x.png`).size(size, size);
         let x = (width - size * 6) / 2 + (i % 6) * size;
@@ -52,6 +52,16 @@ function arrangeImages() {
         img.mousePressed(imageClicked.bind(null, i));
     }
 }
+
+function windowResized() {
+    resizeCanvas(windowWidth, windowHeight);
+    if (windowWidth < windowHeight) {
+        arrangeImages(6, 6); // 세로 모드일 때 6x6 그리드
+    } else {
+        arrangeImages(6, 6); // 가로 모드일 때 6x6 그리드
+    }
+}
+
 
 function imageClicked(index) {
     // 선택된 이미지의 음악을 재생
@@ -95,7 +105,7 @@ function rearrangeImages() {
     let gridRows = 6;
     let gridCols = 6;
 
-    let size = 200;
+    let size = 160;
     for (let i = 0; i < images.length; i++) {
         let img = images[i].img;
         let x = (width - size * gridCols) / 2 + (i % gridCols) * size;
@@ -108,9 +118,9 @@ function rearrangeImages() {
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
     if (windowWidth < windowHeight) {
-        arrangeImages(7, 7);
+        arrangeImages(6, 6);
     } else {
-        arrangeImages(7, 9); // 변경된 부분: 전체 화면일 때 7x9 그리드로 배치
+        arrangeImages(6, 6); // 변경된 부분: 전체 화면일 때 7x9 그리드로 배치
     }
 }
 

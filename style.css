@@ -40,3 +40,13 @@ body {
   background-color: black;
   height: 100vh; /* 화면 높이 100%를 사용합니다. */
 }
+.info-message {
+  position: fixed; /* 고정 위치 */
+  top: 10px; /* 상단에서 10px 떨어진 위치 */
+  right: 10px; /* 오른쪽에서 10px 떨어진 위치 */
+  background-color: rgba(255, 255, 255, 0.8); /* 반투명한 흰색 배경 */
+  padding: 10px; /* 내부 여백 */
+  border-radius: 5px; /* 모서리 둥글게 */
+  font-size: 0.8em; /* 작은 글꼴 크기 */
+  z-index: 100; /* 다른 요소들 위에 표시 */
+}
